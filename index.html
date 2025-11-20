@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>前途加科技 Qantara - IT售前人才培养与解决方案咨询</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg class="logo-svg" viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg">
+                        <!-- 发光背景效果 -->
+                        <circle cx="65" cy="65" r="50" fill="url(#glowGradient)" opacity="0.2" class="logo-glow"/>
+                        <!-- 字母Q的圆形部分 -->
+                        <path d="M 65 25 A 40 40 0 1 1 65 105" fill="none" stroke="url(#qGradient)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" class="logo-q"/>
+                        <!-- Q的尾巴，从右下延伸 -->
+                        <path d="M 100 100 Q 110 105 115 115" fill="none" stroke="url(#qTailGradient)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" class="logo-tail"/>
+                        <!-- Q内部的向上箭头（弯曲，从左下向上向右） -->
+                        <g class="logo-arrow">
+                            <path d="M 50 75 Q 55 55 65 40 Q 70 35 75 40" fill="url(#arrowGradient)" stroke="url(#arrowGradient)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="arrow-path"/>
+                            <!-- 箭头头部 -->
+                            <path d="M 75 40 L 80 35 L 77 40 L 75 45 Z" fill="url(#arrowGradient)" class="arrow-head"/>
+                        </g>
+                        <!-- 光点效果 -->
+                        <circle cx="65" cy="25" r="3" fill="#4facfe" class="logo-dot dot1"/>
+                        <circle cx="100" cy="100" r="2.5" fill="#43e97b" class="logo-dot dot2"/>
+                        <circle cx="75" cy="40" r="2" fill="#00f2fe" class="logo-dot dot3"/>
+                        <defs>
+                            <!-- 发光渐变 -->
+                            <radialGradient id="glowGradient" cx="50%" cy="50%">
+                                <stop offset="0%" style="stop-color:#4facfe;stop-opacity:0.8" />
+                                <stop offset="100%" style="stop-color:#43e97b;stop-opacity:0" />
+                            </radialGradient>
+                            <!-- Q主体渐变：左上蓝到右下绿（动画） -->
+                            <linearGradient id="qGradient" x1="0%" y1="0%" x2="100%" y2="100%" gradientUnits="userSpaceOnUse">
+                                <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1">
+                                    <animate attributeName="stop-color" values="#4facfe;#00f2fe;#43e97b;#4facfe" dur="3s" repeatCount="indefinite"/>
+                                </stop>
+                                <stop offset="50%" style="stop-color:#00f2fe;stop-opacity:1">
+                                    <animate attributeName="stop-color" values="#00f2fe;#43e97b;#4facfe;#00f2fe" dur="3s" repeatCount="indefinite"/>
+                                </stop>
+                                <stop offset="100%" style="stop-color:#43e97b;stop-opacity:1">
+                                    <animate attributeName="stop-color" values="#43e97b;#4facfe;#00f2fe;#43e97b" dur="3s" repeatCount="indefinite"/>
+                                </stop>
+                            </linearGradient>
+                            <!-- Q尾巴渐变：主要是绿色（动画） -->
+                            <linearGradient id="qTailGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#00f2fe;stop-opacity:1">
+                                    <animate attributeName="stop-color" values="#00f2fe;#43e97b;#00f2fe" dur="2s" repeatCount="indefinite"/>
+                                </stop>
+                                <stop offset="100%" style="stop-color:#43e97b;stop-opacity:1">
+                                    <animate attributeName="stop-color" values="#43e97b;#00f2fe;#43e97b" dur="2s" repeatCount="indefinite"/>
+                                </stop>
+                            </linearGradient>
+                            <!-- 箭头渐变：蓝到绿（动画） -->
+                            <linearGradient id="arrowGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1">
+                                    <animate attributeName="stop-color" values="#4facfe;#00f2fe;#43e97b;#4facfe" dur="2.5s" repeatCount="indefinite"/>
+                                </stop>
+                                <stop offset="100%" style="stop-color:#43e97b;stop-opacity:1">
+                                    <animate attributeName="stop-color" values="#43e97b;#4facfe;#00f2fe;#43e97b" dur="2.5s" repeatCount="indefinite"/>
+                                </stop>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <span class="logo-text">Qantara</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">首页</a></li>
+                <li><a href="#services">服务</a></li>
+                <li><a href="#experts">专家</a></li>
+                <li><a href="#courses">课程</a></li>
+                <li><a href="#enterprise">企业服务</a></li>
+                <li><a href="#contact">咨询</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 首页 Hero 区域 -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-logo">
+                    <div class="hero-logo-icon">
+                        <svg class="hero-logo-svg" viewBox="0 0 260 260" xmlns="http://www.w3.org/2000/svg">
+                            <!-- 多层发光背景效果 -->
+                            <circle cx="130" cy="130" r="100" fill="url(#heroGlowGradient1)" opacity="0.15" class="hero-glow glow1"/>
+                            <circle cx="130" cy="130" r="85" fill="url(#heroGlowGradient2)" opacity="0.2" class="hero-glow glow2"/>
+                            <!-- 字母Q的圆形部分（大号） -->
+                            <path d="M 130 50 A 80 80 0 1 1 130 210" fill="none" stroke="url(#heroQGradient)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" class="hero-logo-q"/>
+                            <!-- Q的尾巴，从右下延伸 -->
+                            <path d="M 200 200 Q 220 210 230 230" fill="none" stroke="url(#heroQTailGradient)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" class="hero-logo-tail"/>
+                            <!-- Q内部的向上箭头（弯曲，从左下向上向右） -->
+                            <g class="hero-logo-arrow">
+                                <path d="M 100 150 Q 110 110 130 80 Q 140 70 150 80" fill="url(#heroArrowGradient)" stroke="url(#heroArrowGradient)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" class="hero-arrow-path"/>
+                                <!-- 箭头头部 -->
+                                <path d="M 150 80 L 160 70 L 154 80 L 150 90 Z" fill="url(#heroArrowGradient)" class="hero-arrow-head"/>
+                            </g>
+                            <!-- 光点效果（更多） -->
+                            <circle cx="130" cy="50" r="4" fill="#4facfe" class="hero-logo-dot dot1"/>
+                            <circle cx="200" cy="200" r="3.5" fill="#43e97b" class="hero-logo-dot dot2"/>
+                            <circle cx="150" cy="80" r="3" fill="#00f2fe" class="hero-logo-dot dot3"/>
+                            <circle cx="100" cy="150" r="2.5" fill="#4facfe" class="hero-logo-dot dot4"/>
+                            <circle cx="130" cy="130" r="2" fill="#00f2fe" class="hero-logo-dot dot5"/>
+                            <defs>
+                                <!-- 发光渐变1 -->
+                                <radialGradient id="heroGlowGradient1" cx="50%" cy="50%">
+                                    <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#43e97b;stop-opacity:0" />
+                                </radialGradient>
+                                <!-- 发光渐变2 -->
+                                <radialGradient id="heroGlowGradient2" cx="50%" cy="50%">
+                                    <stop offset="0%" style="stop-color:#00f2fe;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#43e97b;stop-opacity:0" />
+                                </radialGradient>
+                                <!-- Q主体渐变：左上蓝到右下绿（动画） -->
+                                <linearGradient id="heroQGradient" x1="0%" y1="0%" x2="100%" y2="100%" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1">
+                                        <animate attributeName="stop-color" values="#4facfe;#00f2fe;#43e97b;#4facfe" dur="3s" repeatCount="indefinite"/>
+                                    </stop>
+                                    <stop offset="50%" style="stop-color:#00f2fe;stop-opacity:1">
+                                        <animate attributeName="stop-color" values="#00f2fe;#43e97b;#4facfe;#00f2fe" dur="3s" repeatCount="indefinite"/>
+                                    </stop>
+                                    <stop offset="100%" style="stop-color:#43e97b;stop-opacity:1">
+                                        <animate attributeName="stop-color" values="#43e97b;#4facfe;#00f2fe;#43e97b" dur="3s" repeatCount="indefinite"/>
+                                    </stop>
+                                </linearGradient>
+                                <!-- Q尾巴渐变：主要是绿色（动画） -->
+                                <linearGradient id="heroQTailGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#00f2fe;stop-opacity:1">
+                                        <animate attributeName="stop-color" values="#00f2fe;#43e97b;#00f2fe" dur="2s" repeatCount="indefinite"/>
+                                    </stop>
+                                    <stop offset="100%" style="stop-color:#43e97b;stop-opacity:1">
+                                        <animate attributeName="stop-color" values="#43e97b;#00f2fe;#43e97b" dur="2s" repeatCount="indefinite"/>
+                                    </stop>
+                                </linearGradient>
+                                <!-- 箭头渐变：蓝到绿（动画） -->
+                                <linearGradient id="heroArrowGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1">
+                                        <animate attributeName="stop-color" values="#4facfe;#00f2fe;#43e97b;#4facfe" dur="2.5s" repeatCount="indefinite"/>
+                                    </stop>
+                                    <stop offset="100%" style="stop-color:#43e97b;stop-opacity:1">
+                                        <animate attributeName="stop-color" values="#43e97b;#4facfe;#00f2fe;#43e97b" dur="2.5s" repeatCount="indefinite"/>
+                                    </stop>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h1 class="hero-title">前途加科技</h1>
+                    <p class="hero-subtitle">Qantara</p>
+                    <p class="hero-tagline">连接 · 成长 · 前途可期</p>
+                </div>
+                <p class="hero-description">
+                    前途加科技（Qantara）聚焦 IT 售前场景，提供培训辅导、解决方案咨询、专家资源与创新产品，帮助个人与企业快速构建售前竞争力。
+                </p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">立即预约辅导</a>
+                    <a href="#courses" class="btn btn-secondary">查看服务方案</a>
+                </div>
+                <!-- 统计数据 -->
+                <div class="hero-metrics">
+                    <div class="metric-item">
+                        <span class="metric-value">2,500+</span>
+                        <span class="metric-label">售前学员与职场人士</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-value">180+</span>
+                        <span class="metric-label">企业咨询与项目支撑</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-value">40+</span>
+                        <span class="metric-label">大厂/行业联合资源</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 四大板块展示 -->
+            <div class="core-sections">
+                <div class="section-card" data-section="talent">
+                    <div class="card-icon">👥</div>
+                    <h3>人才培养</h3>
+                    <p>系统化售前培训与职业规划</p>
+                </div>
+                <div class="section-card" data-section="solution">
+                    <div class="card-icon">💡</div>
+                    <h3>解决方案</h3>
+                    <p>专业咨询与架构规划</p>
+                </div>
+                <div class="section-card" data-section="expert">
+                    <div class="card-icon">⭐</div>
+                    <h3>专家资源</h3>
+                    <p>行业专家与项目顾问</p>
+                </div>
+                <div class="section-card" data-section="product">
+                    <div class="card-icon">🚀</div>
+                    <h3>创新产品</h3>
+                    <p>AI+售前赋能平台</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 公司定位 -->
+    <section id="positioning" class="positioning">
+        <div class="container">
+            <h2 class="section-title">公司定位</h2>
+            <p class="section-subtitle">四大核心业务，全链路赋能 IT 售前</p>
+            <p class="section-description">致力于成为 IT 售前职业发展的最佳引路者 和 企业技术咨询的可信伙伴</p>
+            
+            <div class="positioning-grid">
+                <div class="position-card">
+                    <div class="position-number">01</div>
+                    <h3>人才培养与辅导</h3>
+                    <p class="position-desc">面向高校毕业生、在职售前及转岗人群，构建能力框架与职业路径。</p>
+                    <ul>
+                        <li>系统化售前训练营</li>
+                        <li>简历优化 & 模拟面试</li>
+                        <li>岗位推荐与职业规划</li>
+                        <li>行业资源链接</li>
+                        <li>能力提升与知识体系构建</li>
+                    </ul>
+                </div>
+                <div class="position-card">
+                    <div class="position-number">02</div>
+                    <h3>解决方案与咨询服务</h3>
+                    <p class="position-desc">面向甲方客户，提供架构规划、方案编写与专项技术培训。</p>
+                    <ul>
+                        <li>行业化解决方案设计</li>
+                        <li>IT 架构规划 & 咨询</li>
+                        <li>专项技术培训与 KT</li>
+                        <li>项目集成与实施</li>
+                    </ul>
+                </div>
+                <div class="position-card">
+                    <div class="position-number">03</div>
+                    <h3>专家资源赋能</h3>
+                    <p class="position-desc">链接系统集成商与方案商，提供专家顾问与投标支撑。</p>
+                    <ul>
+                        <li>行业专家驻场/远程</li>
+                        <li>售前顾问与投标支持</li>
+                        <li>项目技术顾问服务</li>
+                        <li>投标材料与方案支持</li>
+                    </ul>
+                </div>
+                <div class="position-card">
+                    <div class="position-number">04</div>
+                    <h3>自研产品 X</h3>
+                    <p class="position-desc">AI+售前赋能平台，支撑培训、评估、知识库与教学运营。</p>
+                    <ul>
+                        <li>AI 辅助售前培训</li>
+                        <li>能力评估量化系统</li>
+                        <li>知识库与运营平台</li>
+                        <li>智能培训内容引擎</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 服务范围 -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">服务范围</h2>
+            <p class="section-subtitle">覆盖培训咨询、项目集成与产品研发三大领域</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🎓</div>
+                    <h3>培训与咨询</h3>
+                    <p class="service-desc">聚焦安全、云计算、AI 等主流赛道，提供多层次培训方案。</p>
+                    <ul>
+                        <li>售前岗位技能系统培训</li>
+                        <li>零基础转行辅导</li>
+                        <li>简历优化 & 模拟面试</li>
+                        <li>行业资源链接与就业推荐</li>
+                        <li>专家一对一职业辅导</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>项目集成与技术咨询</h3>
+                    <p class="service-desc">助力企业完成方案编写、架构设计与实施交付。</p>
+                    <ul>
+                        <li>解决方案编写与设计</li>
+                        <li>IT 架构规划与评估</li>
+                        <li>软硬件集成与实施</li>
+                        <li>培训与知识转移（KT）</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>产品研发</h3>
+                    <p class="service-desc">自研产品 X 以 AI 驱动售前培训、评估与知识管理。</p>
+                    <ul>
+                        <li>智能培训内容引擎</li>
+                        <li>能力评估&画像系统</li>
+                        <li>知识库管理与运营</li>
+                        <li>AI 辅助售前培训</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 面向群体 -->
+    <section id="audience" class="audience">
+        <div class="container">
+            <h2 class="section-title">面向群体</h2>
+            <p class="section-subtitle">TO C 与 TO B 双向覆盖，打造售前生态</p>
+            <div class="audience-grid">
+                <div class="audience-card toc">
+                    <h3>个人用户</h3>
+                    <p class="audience-desc">学生、在职售前、跨界转行人群，通过训练营与私教实现跃迁。</p>
+                    <ul>
+                        <li>高校/毕业大学生</li>
+                        <li>在职售前工程师</li>
+                        <li>想转行的职场人士</li>
+                    </ul>
+                </div>
+                <div class="audience-card tob">
+                    <h3>企业用户</h3>
+                    <p class="audience-desc">甲方、集成商、生态伙伴，通过专家与方案服务加速项目落地。</p>
+                    <ul>
+                        <li>金融、能源、电力、制造、政企</li>
+                        <li>系统集成商、方案商、服务商</li>
+                        <li>生态合作伙伴</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 专家/讲师页面 -->
+    <section id="experts" class="experts">
+        <div class="container">
+            <h2 class="section-title">强大师资资源</h2>
+            <p class="section-subtitle">AI 风格虚拟头像 + 真实经历，双面信息卡</p>
+            <p class="section-description">来自上市公司高管、头部科技企业解决方案总经理、多年经验的售前总监、行业知名架构师</p>
+            
+            <div class="experts-scroll-wrapper">
+                <div class="experts-scroll">
+                    <div class="expert-card">
+                        <div class="expert-card-inner">
+                            <div class="expert-front">
+                                <div class="expert-avatar" data-name="David Chen" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">DC</div>
+                                <h3>David Chen</h3>
+                                <p class="expert-title">解决方案总经理</p>
+                                <div class="expert-tags">
+                                    <span class="tag">AI</span>
+                                    <span class="tag">云计算</span>
+                                </div>
+                            </div>
+                            <div class="expert-back">
+                                <h4>专业背景</h4>
+                                <p>上市公司高管，15年+解决方案经验，主导多个大型AI项目</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="expert-card">
+                        <div class="expert-card-inner">
+                            <div class="expert-front">
+                                <div class="expert-avatar" data-name="Sarah Li" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">SL</div>
+                                <h3>Sarah Li</h3>
+                                <p class="expert-title">售前总监</p>
+                                <div class="expert-tags">
+                                    <span class="tag">安全</span>
+                                    <span class="tag">架构师</span>
+                                </div>
+                            </div>
+                            <div class="expert-back">
+                                <h4>专业背景</h4>
+                                <p>头部科技企业售前总监，10年+安全领域经验，行业知名架构师</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="expert-card">
+                        <div class="expert-card-inner">
+                            <div class="expert-front">
+                                <div class="expert-avatar" data-name="Michael Wang" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">MW</div>
+                                <h3>Michael Wang</h3>
+                                <p class="expert-title">技术专家</p>
+                                <div class="expert-tags">
+                                    <span class="tag">云计算</span>
+                                    <span class="tag">数据</span>
+                                </div>
+                            </div>
+                            <div class="expert-back">
+                                <h4>专业背景</h4>
+                                <p>多年云计算与大数据项目经验，服务多个头部金融机构</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="expert-card">
+                        <div class="expert-card-inner">
+                            <div class="expert-front">
+                                <div class="expert-avatar" data-name="Emma Zhao" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">EZ</div>
+                                <h3>Emma Zhao</h3>
+                                <p class="expert-title">行业专家</p>
+                                <div class="expert-tags">
+                                    <span class="tag">网络</span>
+                                    <span class="tag">售前</span>
+                                </div>
+                            </div>
+                            <div class="expert-back">
+                                <h4>专业背景</h4>
+                                <p>资深网络架构师，在运营商和大型企业有丰富项目经验</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="expert-card">
+                        <div class="expert-card-inner">
+                            <div class="expert-front">
+                                <div class="expert-avatar" data-name="James Zhang" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">JZ</div>
+                                <h3>James Zhang</h3>
+                                <p class="expert-title">解决方案架构师</p>
+                                <div class="expert-tags">
+                                    <span class="tag">AI</span>
+                                    <span class="tag">机器学习</span>
+                                </div>
+                            </div>
+                            <div class="expert-back">
+                                <h4>专业背景</h4>
+                                <p>AI解决方案架构师，机器学习领域专家，曾就职于顶级科技公司</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="expert-card">
+                        <div class="expert-card-inner">
+                            <div class="expert-front">
+                                <div class="expert-avatar" data-name="Lisa Liu" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">LL</div>
+                                <h3>Lisa Liu</h3>
+                                <p class="expert-title">安全专家</p>
+                                <div class="expert-tags">
+                                    <span class="tag">网络安全</span>
+                                    <span class="tag">合规</span>
+                                </div>
+                            </div>
+                            <div class="expert-back">
+                                <h4>专业背景</h4>
+                                <p>网络安全专家，专注于合规与风险管理，12年+行业经验</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="expert-card">
+                        <div class="expert-card-inner">
+                            <div class="expert-front">
+                                <div class="expert-avatar" data-name="Robert Wu" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);">RW</div>
+                                <h3>Robert Wu</h3>
+                                <p class="expert-title">云架构师</p>
+                                <div class="expert-tags">
+                                    <span class="tag">云原生</span>
+                                    <span class="tag">DevOps</span>
+                                </div>
+                            </div>
+                            <div class="expert-back">
+                                <h4>专业背景</h4>
+                                <p>云原生架构专家，DevOps领域资深顾问，为财富500强企业设计解决方案</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="expert-card">
+                        <div class="expert-card-inner">
+                            <div class="expert-front">
+                                <div class="expert-avatar" data-name="Amy Chen" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);">AC</div>
+                                <h3>Amy Chen</h3>
+                                <p class="expert-title">数据专家</p>
+                                <div class="expert-tags">
+                                    <span class="tag">大数据</span>
+                                    <span class="tag">分析</span>
+                                </div>
+                            </div>
+                            <div class="expert-back">
+                                <h4>专业背景</h4>
+                                <p>大数据与分析专家，主导多个大型企业数据转型项目</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 重复卡片以实现无缝循环 -->
+                    <div class="expert-card">
+                        <div class="expert-card-inner">
+                            <div class="expert-front">
+                                <div class="expert-avatar" data-name="David Chen" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">DC</div>
+                                <h3>David Chen</h3>
+                                <p class="expert-title">解决方案总经理</p>
+                                <div class="expert-tags">
+                                    <span class="tag">AI</span>
+                                    <span class="tag">云计算</span>
+                                </div>
+                            </div>
+                            <div class="expert-back">
+                                <h4>专业背景</h4>
+                                <p>上市公司高管，15年+解决方案经验，主导多个大型AI项目</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="expert-card">
+                        <div class="expert-card-inner">
+                            <div class="expert-front">
+                                <div class="expert-avatar" data-name="Sarah Li" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">SL</div>
+                                <h3>Sarah Li</h3>
+                                <p class="expert-title">售前总监</p>
+                                <div class="expert-tags">
+                                    <span class="tag">安全</span>
+                                    <span class="tag">架构师</span>
+                                </div>
+                            </div>
+                            <div class="expert-back">
+                                <h4>专业背景</h4>
+                                <p>头部科技企业售前总监，10年+安全领域经验，行业知名架构师</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="expert-card">
+                        <div class="expert-card-inner">
+                            <div class="expert-front">
+                                <div class="expert-avatar" data-name="Michael Wang" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">MW</div>
+                                <h3>Michael Wang</h3>
+                                <p class="expert-title">技术专家</p>
+                                <div class="expert-tags">
+                                    <span class="tag">云计算</span>
+                                    <span class="tag">数据</span>
+                                </div>
+                            </div>
+                            <div class="expert-back">
+                                <h4>专业背景</h4>
+                                <p>多年云计算与大数据项目经验，服务多个头部金融机构</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="expert-card">
+                        <div class="expert-card-inner">
+                            <div class="expert-front">
+                                <div class="expert-avatar" data-name="Emma Zhao" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">EZ</div>
+                                <h3>Emma Zhao</h3>
+                                <p class="expert-title">行业专家</p>
+                                <div class="expert-tags">
+                                    <span class="tag">网络</span>
+                                    <span class="tag">售前</span>
+                                </div>
+                            </div>
+                            <div class="expert-back">
+                                <h4>专业背景</h4>
+                                <p>资深网络架构师，在运营商和大型企业有丰富项目经验</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 资源优势 -->
+    <section id="resources" class="resources">
+        <div class="container">
+            <h2 class="section-title">资源优势</h2>
+            <p class="section-subtitle">全国优质资源矩阵，保障培训与项目双成功</p>
+            
+            <div class="resources-content">
+                <div class="resource-item">
+                    <h3>生态覆盖</h3>
+                    <p class="resource-desc">腾讯、阿里、字节、百度，以及头部安全厂商与行业伙伴。</p>
+                    <p>覆盖领域：AI、安全、云计算、数据、网络等</p>
+                    <div class="partner-logos">
+                        <div class="partner-logo">腾讯</div>
+                        <div class="partner-logo">阿里</div>
+                        <div class="partner-logo">字节</div>
+                        <div class="partner-logo">百度</div>
+                        <div class="partner-logo">天融信</div>
+                        <div class="partner-logo">深信服</div>
+                        <div class="partner-logo">奇安信</div>
+                        <div class="partner-logo">安恒</div>
+                        <div class="partner-logo">华润</div>
+                    </div>
+                </div>
+                
+                <div class="resource-item">
+                    <h3>就业直连</h3>
+                    <p class="resource-desc">跨行业岗位推介，售前技能图谱评估，真实岗位机会直通。</p>
+                    <ul>
+                        <li>跨行业岗位推介</li>
+                        <li>售前技能图谱能力评估</li>
+                        <li>大量真实岗位机会直连</li>
+                    </ul>
+                </div>
+                
+                <div class="resource-item">
+                    <h3>头部行业深耕</h3>
+                    <p class="resource-desc">覆盖金融、央企部委、能源电力、运营商、教育医疗等。</p>
+                    <div class="industry-tags">
+                        <span class="industry-tag">头部金融机构</span>
+                        <span class="industry-tag">国家部委/央企单位</span>
+                        <span class="industry-tag">能源与电力</span>
+                        <span class="industry-tag">大型企业集团</span>
+                        <span class="industry-tag">运营商</span>
+                        <span class="industry-tag">教育与医疗</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 课程与服务 -->
+    <section id="courses" class="courses">
+        <div class="container">
+            <h2 class="section-title">课程与服务</h2>
+            <p class="section-subtitle">多样化授课形式 + 明确价格卡片</p>
+            
+            <div class="pricing-section">
+                <h3 class="pricing-title">🎓 个人服务定价（TO C）</h3>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <h4>一对一售前辅导</h4>
+                        <div class="pricing-options">
+                            <div class="price-item">
+                                <span class="price-label">线上</span>
+                                <span class="price-value">¥500 / 小时</span>
+                            </div>
+                            <div class="price-item">
+                                <span class="price-label">线下</span>
+                                <span class="price-value">¥800 / 小时</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pricing-card">
+                        <h4>简历优化 & 求职建议</h4>
+                        <div class="pricing-options">
+                            <div class="price-item">
+                                <span class="price-value">¥200 / 次</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pricing-card">
+                        <h4>模拟面试（含点评）</h4>
+                        <div class="pricing-options">
+                            <div class="price-item">
+                                <span class="price-label">线上</span>
+                                <span class="price-value">¥300 / 小时</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pricing-card">
+                        <h4>售前岗系统培训</h4>
+                        <div class="pricing-options">
+                            <div class="price-item">
+                                <span class="price-label">标准班</span>
+                                <span class="price-value">¥2000 / 人</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-comparison">
+                <h3>服务对比</h3>
+                <div class="comparison-table">
+                    <div class="comparison-row header">
+                        <div class="comparison-cell">服务形式</div>
+                        <div class="comparison-cell">一对一私教（线上）</div>
+                        <div class="comparison-cell">一对一私教（线下）</div>
+                        <div class="comparison-cell">小班制线上课程</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-cell">灵活性</div>
+                        <div class="comparison-cell">高</div>
+                        <div class="comparison-cell">中</div>
+                        <div class="comparison-cell">中</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-cell">互动性</div>
+                        <div class="comparison-cell">高</div>
+                        <div class="comparison-cell">最高</div>
+                        <div class="comparison-cell">中</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-cell">价格</div>
+                        <div class="comparison-cell">¥500/小时</div>
+                        <div class="comparison-cell">¥800/小时</div>
+                        <div class="comparison-cell">¥2000/人</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 企业服务 -->
+    <section id="enterprise" class="enterprise">
+        <div class="container">
+            <h2 class="section-title">企业服务（TO B）</h2>
+            <p class="section-subtitle">模块化解决方案，服务头部行业</p>
+            
+            <div class="enterprise-pricing">
+                <h3>🏢 企业服务定价</h3>
+                <div class="enterprise-grid">
+                    <div class="enterprise-card">
+                        <h4>解决方案设计</h4>
+                        <p class="enterprise-price">¥30000 起 / 份</p>
+                    </div>
+                    <div class="enterprise-card">
+                        <h4>项目顾问专家</h4>
+                        <p class="enterprise-price">¥6000～¥10000 / 天</p>
+                        <p class="enterprise-note">（按级别）</p>
+                    </div>
+                    <div class="enterprise-card">
+                        <h4>投标支持</h4>
+                        <p class="enterprise-price">¥10000～¥30000 / 项</p>
+                    </div>
+                    <div class="enterprise-card">
+                        <h4>企业售前赋能工作坊</h4>
+                        <p class="enterprise-price">¥10000～¥30000 / 场</p>
+                    </div>
+                </div>
+                <div class="enterprise-cta">
+                    <a href="#contact" class="btn btn-primary">按需报价</a>
+                </div>
+            </div>
+
+            <div class="enterprise-industries">
+                <h3>我们服务的行业</h3>
+                <div class="industries-scroll">
+                    <div class="industry-item">头部金融机构</div>
+                    <div class="industry-item">国家部委/央企单位</div>
+                    <div class="industry-item">能源与电力</div>
+                    <div class="industry-item">大型企业集团</div>
+                    <div class="industry-item">运营商</div>
+                    <div class="industry-item">教育与医疗行业</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心优势 -->
+    <section id="advantages" class="advantages">
+        <div class="container">
+            <h2 class="section-title">核心优势</h2>
+            <p class="section-subtitle">师资强大 · 经验丰富 · 实战有效 · 培用一体</p>
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <div class="advantage-icon">👨‍🏫</div>
+                    <h3>师资强大</h3>
+                    <p>来自大厂与上市企业的实战专家</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">📚</div>
+                    <h3>经验丰富</h3>
+                    <p>覆盖 AI、安全、云计算等主流赛道</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">⚡</div>
+                    <h3>实战有效</h3>
+                    <p>课程内容来自真实项目经验</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">🎯</div>
+                    <h3>培用一体</h3>
+                    <p>培训直连就业，实现"学完即能用"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 咨询表单 -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">信息与咨询</h2>
+            <p class="section-subtitle">填写需求表单 · 扫码添加专属顾问</p>
+            <div class="contact-content">
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="consultForm">
+                        <div class="form-group">
+                            <label for="name">姓名 / 公司 *</label>
+                            <input type="text" id="name" name="name" required placeholder="如：王同学 / 某科技">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact">联系方式 *</label>
+                            <input type="text" id="contact" name="contact" required placeholder="手机号或邮箱">
+                        </div>
+                        <div class="form-group">
+                            <label for="needType">需求类型</label>
+                            <select id="needType" name="needType">
+                                <option value="">请选择</option>
+                                <option value="training">售前培训</option>
+                                <option value="solution">解决方案咨询</option>
+                                <option value="expert">专家资源对接</option>
+                                <option value="product">产品 X 合作</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="need">项目背景 / 期望 *</label>
+                            <textarea id="need" name="need" rows="4" required placeholder="请描述技术方向、行业、时间节点等"></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">提交需求</button>
+                        </div>
+                        <p class="form-note">我们将在 1 个工作日内与您取得联系，可签署保密协议再深入交流。</p>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <h4>微信快速咨询</h4>
+                            <div class="wechat-qr">
+                                <div class="qr-placeholder">微信二维码位<br>可嵌入企业微信/公众号码</div>
+                                <p>扫码添加售前顾问，获取课程排期、讲师档期或企业对接服务。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>企业介绍</h4>
+                    <p>前途加科技（Qantara）致力于成为 IT 售前职业发展的最佳引路者与可信赖的企业技术咨询伙伴。</p>
+                </div>
+                <div class="footer-section">
+                    <h4>服务项目</h4>
+                    <ul>
+                        <li><a href="#services">售前培训与辅导</a></li>
+                        <li><a href="#courses">解决方案咨询</a></li>
+                        <li><a href="#enterprise">专家资源支撑</a></li>
+                        <li><a href="#experts">自研产品 X</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>邮箱：hello@qantara.com</li>
+                        <li>电话：400-800-0710</li>
+                        <li>地址：深圳 · 上海 · 北京</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>合规</h4>
+                    <ul>
+                        <li><a href="#privacy">隐私政策</a></li>
+                        <li><a href="#terms">服务条款</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 前途加科技（Qantara）. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
