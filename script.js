@@ -250,13 +250,36 @@ if (humanConsultBtn) {
     });
 }
 
-// 机器人咨询按钮
-const chatbotBtn = document.getElementById('chatbotBtn');
-if (chatbotBtn) {
-    chatbotBtn.addEventListener('click', () => {
-        showNotification('机器人咨询功能开发中，敬请期待！', 'info');
-        // 这里可以添加实际的聊天机器人逻辑
-    });
+// 复制微信号功能
+function copyWechatId() {
+    const wechatId = 'qantara888';
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(wechatId).then(() => {
+            showNotification('微信号已复制：' + wechatId, 'success');
+        }).catch(() => {
+            fallbackCopyText(wechatId);
+        });
+    } else {
+        fallbackCopyText(wechatId);
+    }
+}
+
+// 备用复制方法
+function fallbackCopyText(text) {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.position = 'fixed';
+    textArea.style.left = '-999999px';
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    try {
+        document.execCommand('copy');
+        showNotification('微信号已复制：' + text, 'success');
+    } catch (err) {
+        showNotification('复制失败，请手动复制：' + text, 'info');
+    }
+    document.body.removeChild(textArea);
 }
 
 // 鼠标跟随效果（可选，用于增强交互感）
