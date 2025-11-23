@@ -783,21 +783,26 @@
                         <h4>微信快速咨询</h4>
                         <div class="wechat-qr">
                             <div class="qr-placeholder">
-                                <div class="qr-logo">
-                                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width: 40px; height: 40px; margin-bottom: 10px;">
-                                        <path d="M 50 25 A 25 25 0 1 1 50 75" fill="none" stroke="url(#qrLogoGradient)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M 75 75 Q 80 80 85 85" fill="none" stroke="url(#qrLogoGradient)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M 40 60 Q 45 45 50 30 Q 55 25 60 30" fill="url(#qrLogoGradient)" stroke="url(#qrLogoGradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M 60 30 L 65 25 L 62 30 L 60 35 Z" fill="url(#qrLogoGradient)"/>
-                                        <defs>
-                                            <linearGradient id="qrLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                                <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
-                                                <stop offset="100%" style="stop-color:#43e97b;stop-opacity:1" />
-                                            </linearGradient>
-                                        </defs>
-                                    </svg>
+                                <!-- 微信二维码图片 -->
+                                <img src="images/echat-qr.png.png" alt="微信二维码" class="qr-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <!-- 如果图片加载失败，显示备用占位符 -->
+                                <div class="qr-fallback" style="display: none; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                                    <div class="qr-logo">
+                                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width: 40px; height: 40px; margin-bottom: 10px;">
+                                            <path d="M 50 25 A 25 25 0 1 1 50 75" fill="none" stroke="url(#qrLogoGradient)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M 75 75 Q 80 80 85 85" fill="none" stroke="url(#qrLogoGradient)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M 40 60 Q 45 45 50 30 Q 55 25 60 30" fill="url(#qrLogoGradient)" stroke="url(#qrLogoGradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M 60 30 L 65 25 L 62 30 L 60 35 Z" fill="url(#qrLogoGradient)"/>
+                                            <defs>
+                                                <linearGradient id="qrLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                    <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+                                                    <stop offset="100%" style="stop-color:#43e97b;stop-opacity:1" />
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <div class="qr-text">微信二维码</div>
                                 </div>
-                                <div class="qr-text">微信二维码</div>
                                 <div class="qr-instruction">扫一扫上面的二维码图案<br>加我为朋友</div>
                             </div>
                             <div class="wechat-id">
