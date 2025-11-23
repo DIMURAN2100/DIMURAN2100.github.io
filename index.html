@@ -776,46 +776,41 @@
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">信息与咨询</h2>
-            <p class="section-subtitle">填写需求表单 · 扫码添加专属顾问</p>
+            <p class="section-subtitle">扫码添加专属顾问，获取课程排期、讲师档期或企业对接服务</p>
             <div class="contact-content">
-                <div class="contact-form-wrapper">
-                    <form class="contact-form" id="consultForm">
-                        <div class="form-group">
-                            <label for="name">姓名 / 公司 *</label>
-                            <input type="text" id="name" name="name" required placeholder="如：王同学 / 某科技">
-                        </div>
-                        <div class="form-group">
-                            <label for="contact">联系方式 *</label>
-                            <input type="text" id="contact" name="contact" required placeholder="手机号或邮箱">
-                        </div>
-                        <div class="form-group">
-                            <label for="needType">需求类型</label>
-                            <select id="needType" name="needType">
-                                <option value="">请选择</option>
-                                <option value="training">售前培训</option>
-                                <option value="solution">解决方案咨询</option>
-                                <option value="expert">专家资源对接</option>
-                                <option value="product">产品 X 合作</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="need">项目背景 / 期望 *</label>
-                            <textarea id="need" name="need" rows="4" required placeholder="请描述技术方向、行业、时间节点等"></textarea>
-                        </div>
-                        <div class="form-actions">
-                            <button type="submit" class="btn btn-primary">提交需求</button>
-                        </div>
-                        <p class="form-note">我们将在 1 个工作日内与您取得联系，可签署保密协议再深入交流。</p>
-                    </form>
-                </div>
-                <div class="contact-info">
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <h4>微信快速咨询</h4>
-                            <div class="wechat-qr">
-                                <div class="qr-placeholder">微信二维码位<br>可嵌入企业微信/公众号码</div>
-                                <p>扫码添加售前顾问，获取课程排期、讲师档期或企业对接服务。</p>
+                <div class="contact-info-centered">
+                    <div class="contact-method">
+                        <h4>微信快速咨询</h4>
+                        <div class="wechat-qr">
+                            <div class="qr-placeholder">
+                                <div class="qr-logo">
+                                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width: 40px; height: 40px; margin-bottom: 10px;">
+                                        <path d="M 50 25 A 25 25 0 1 1 50 75" fill="none" stroke="url(#qrLogoGradient)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M 75 75 Q 80 80 85 85" fill="none" stroke="url(#qrLogoGradient)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M 40 60 Q 45 45 50 30 Q 55 25 60 30" fill="url(#qrLogoGradient)" stroke="url(#qrLogoGradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M 60 30 L 65 25 L 62 30 L 60 35 Z" fill="url(#qrLogoGradient)"/>
+                                        <defs>
+                                            <linearGradient id="qrLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+                                                <stop offset="100%" style="stop-color:#43e97b;stop-opacity:1" />
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                </div>
+                                <div class="qr-text">微信二维码</div>
+                                <div class="qr-instruction">扫一扫上面的二维码图案<br>加我为朋友</div>
                             </div>
+                            <div class="wechat-id">
+                                <span class="wechat-label">微信号：</span>
+                                <span class="wechat-value">qantara888</span>
+                                <button class="copy-btn" onclick="copyWechatId()" title="复制微信号">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <p class="wechat-desc">扫码添加售前顾问，获取课程排期、讲师档期或企业对接服务</p>
                         </div>
                     </div>
                 </div>
