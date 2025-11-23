@@ -1281,9 +1281,16 @@ section {
 
 /* 咨询表单 */
 .contact-content {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-info-centered {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
 }
 
 .contact-form {
@@ -1373,20 +1380,115 @@ section {
 
 .wechat-qr {
     margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .qr-placeholder {
-    width: 150px;
-    height: 150px;
-    margin: 0 auto;
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px dashed rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
+    width: 200px;
+    height: auto;
+    min-height: 200px;
+    margin: 0 auto 1.5rem;
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     color: var(--text-muted);
     font-size: 0.9rem;
+    padding: 1rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.qr-image {
+    width: 100%;
+    height: auto;
+    max-width: 180px;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+}
+
+.qr-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qr-text {
+    font-size: 0.85rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.qr-instruction {
+    font-size: 0.75rem;
+    color: #666;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.wechat-id {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0.8rem 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.wechat-id:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(79, 172, 254, 0.5);
+}
+
+.wechat-label {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.wechat-value {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 0.1em;
+}
+
+.copy-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    margin-left: 0.5rem;
+}
+
+.copy-btn:hover {
+    color: #4facfe;
+    background: rgba(79, 172, 254, 0.1);
+    transform: scale(1.1);
+}
+
+.wechat-desc {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    text-align: center;
+    line-height: 1.6;
+    margin-top: 1rem;
 }
 
 /* 页脚 */
@@ -1476,7 +1578,25 @@ section {
     }
 
     .contact-content {
-        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .contact-info-centered {
+        max-width: 100%;
+    }
+
+    .qr-placeholder {
+        width: 180px;
+        height: 180px;
+    }
+
+    .wechat-id {
+        flex-wrap: wrap;
+        padding: 0.6rem 1rem;
+    }
+
+    .wechat-value {
+        font-size: 1rem;
     }
 
     .comparison-row {
